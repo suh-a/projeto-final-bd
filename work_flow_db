@@ -27,7 +27,17 @@ CREATE TABLE areas(
 );
 
 CREATE TABLE profissionais(
-
+    id_profissional INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(45) NOT NULL,
+    email VARCHAR(45)NOT NULL,
+    senha VARCHAR(8) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    cpf_cnpj VARCHAR(45)NOT NULL,
+    descricao VARCHAR(200),
+    nota_media DOUBLE,
+    data_criacao DATETIME NOT NULL,
+    id_area INT,
+    FOREIGN KEY (id_area)REFERENCES areas(id_area)
 );
 
 CREATE TABLE disponibilidade(
