@@ -1,0 +1,7 @@
+CREATE DATABASE work_flow_db;
+
+USE work_flow_db;
+
+CREATE TABLE usuarios(
+
+);
