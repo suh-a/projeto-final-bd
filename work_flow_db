@@ -11,3 +11,7 @@ CREATE TABLE usuarios(
     cpf VARCHAR(14) NOT NULL,
     data_criacao DATETIME DEFAULT NOW()
 );
+
+CREATE TABLE notificacoes(
+
+);
