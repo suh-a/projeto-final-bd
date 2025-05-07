@@ -13,5 +13,10 @@ CREATE TABLE usuarios(
 );
 
 CREATE TABLE notificacoes(
-
+   id_notificacao INT AUTO_INCREMENT PRIMARY KEY,
+    mensagem VARCHAR(45) NOT NULL,
+    data_envio DATETIME NOT NULL DEFAULT NOW(),
+    lida TINYINT NOT NULL,
+    id_usuarios INT,
+    FOREIGN KEY(id_usuarios)REFERENCES usuarios(id_usuarios)
 );
