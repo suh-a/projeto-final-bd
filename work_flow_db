@@ -20,3 +20,51 @@ CREATE TABLE notificacoes(
     id_usuarios INT,
     FOREIGN KEY(id_usuarios)REFERENCES usuarios(id_usuarios)
 );
+
+CREATE TABLE areas(
+	
+);
+
+CREATE TABLE profissionais(
+
+);
+
+CREATE TABLE disponibilidade(
+
+);
+
+CREATE TABLE avaliacoes(
+	
+);
+
+CREATE TABLE favoritos(
+
+);
+
+CREATE TABLE mensagens_chat(
+
+);
+
+CREATE TABLE enderecos(
+    
+);
+
+CREATE TABLE categorias_servicos(
+	  
+);
+
+CREATE TABLE servicos(
+
+);
+
+CREATE TABLE solicitar_serv(
+	
+);
+
+CREATE TABLE pagamentos(
+	
+);
+
+CREATE TABLE historico_pag(
+	
+);
