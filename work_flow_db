@@ -41,7 +41,12 @@ CREATE TABLE profissionais(
 );
 
 CREATE TABLE disponibilidade(
-
+    id_disponibilidade INT AUTO_INCREMENT PRIMARY KEY,
+    dia_semana VARCHAR(45) NOT NULL,
+    horario_inicio TIME NOT NULL,
+    horario_fim TIME NOT NULL,
+    id_profissional INT,
+    FOREIGN KEY(id_profissional)REFERENCES profissionais(id_profissional)
 );
 
 CREATE TABLE avaliacoes(
