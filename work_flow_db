@@ -89,7 +89,13 @@ CREATE TABLE solicitar_serv(
 );
 
 CREATE TABLE pagamentos(
-	
+    id_pagamento INT AUTO_INCREMENT PRIMARY KEY,
+    valor DOUBLE NOT NULL,
+    metodo_pagamento VARCHAR(45) NOT NULL,
+    status_pagamento ENUM('PA','NP') NOT NULL,
+    data_pagamento DATE DEFAULT NOW(),
+    id_solicitacao INT,
+    FOREIGN KEY(id_solicitacao)REFERENCES solicitar_serv(id_solicitacao)
 );
 
 CREATE TABLE historico_pag(
