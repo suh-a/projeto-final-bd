@@ -61,7 +61,11 @@ CREATE TABLE avaliacoes(
 );
 
 CREATE TABLE favoritos(
-
+id_favorito INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuarios INT,
+    id_profissional INT,
+    FOREIGN KEY (id_usuarios)REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY (id_profissional)REFERENCES profissionais(id_profissional)
 );
 
 CREATE TABLE mensagens_chat(
