@@ -103,5 +103,9 @@ CREATE TABLE pagamentos(
 );
 
 CREATE TABLE historico_pag(
-	
+    id_historico INT AUTO_INCREMENT PRIMARY KEY,
+    id_profissional INT,
+    id_pagamento INT,
+    FOREIGN KEY(id_profissional)REFERENCES profissionais(id_profissional),
+    FOREIGN KEY(id_pagamento)REFERENCES pagamentos(id_pagamento)
 );
