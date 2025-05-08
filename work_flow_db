@@ -50,7 +50,14 @@ CREATE TABLE disponibilidade(
 );
 
 CREATE TABLE avaliacoes(
-	
+    id_avaliacao INT AUTO_INCREMENT PRIMARY KEY,
+    nota DOUBLE NOT NULL,
+    comentario VARCHAR(45) NOT NULL,
+    data_avaliacao DATETIME DEFAULT NOW(),
+    id_usuarios INT,
+    id_profissional INT,
+    FOREIGN KEY(id_usuarios)REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY(id_profissional)REFERENCES profissionais(id_profissional)
 );
 
 CREATE TABLE favoritos(
