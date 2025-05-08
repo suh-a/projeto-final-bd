@@ -69,19 +69,42 @@ CREATE TABLE favoritos(
 );
 
 CREATE TABLE mensagens_chat(
-
+    id_mensagem INT AUTO_INCREMENT PRIMARY KEY,
+    mensagem TEXT NOT NULL,
+    data_envio DATETIME DEFAULT NOW(),
+    id_usuarios INT,
+    id_profissional INT,
+    FOREIGN KEY(id_usuarios) REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY(id_profissional) REFERENCES profissionais(id_profissional)
 );
 
 CREATE TABLE enderecos(
-    
+    id_endereco INT AUTO_INCREMENT PRIMARY KEY,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(50),
+    bairro VARCHAR(50) NOT NULL,
+    cidade VARCHAR(50) NOT NULL,
+    estado VARCHAR(2) NOT NULL,
+    cep VARCHAR(9) NOT NULL,
+    id_usuarios INT,
+    id_profissional INT,
+    FOREIGN KEY(id_usuarios) REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY(id_profissional) REFERENCES profissionais(id_profissional)
 );
 
 CREATE TABLE categorias_servicos(
-	  
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nome_categoria VARCHAR(45) NOT NULL	  
 );
 
 CREATE TABLE servicos(
-
+    id_servico INT AUTO_INCREMENT PRIMARY KEY,
+    nome_servico VARCHAR(45) NOT NULL,
+    descricao TEXT,
+    preco_estimar DOUBLE NOT NULL,
+    id_categoria INT,
+    FOREIGN KEY(id_categoria) REFERENCES categorias_servicos(id_categoria)
 );
 
 CREATE TABLE solicitar_serv(
