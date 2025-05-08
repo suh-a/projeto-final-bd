@@ -3,7 +3,7 @@ CREATE DATABASE work_flow_db;
 USE work_flow_db;
 
 CREATE TABLE usuarios(
-  	id_usuarios INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuarios INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(45) NOT NULL,
     email VARCHAR(45)NOT NULL,
     senha VARCHAR(8) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE usuarios(
 );
 
 CREATE TABLE notificacoes(
-   id_notificacao INT AUTO_INCREMENT PRIMARY KEY,
+    id_notificacao INT AUTO_INCREMENT PRIMARY KEY,
     mensagem VARCHAR(45) NOT NULL,
     data_envio DATETIME NOT NULL DEFAULT NOW(),
     lida TINYINT NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE avaliacoes(
 );
 
 CREATE TABLE favoritos(
-id_favorito INT AUTO_INCREMENT PRIMARY KEY,
+    id_favorito INT AUTO_INCREMENT PRIMARY KEY,
     id_usuarios INT,
     id_profissional INT,
     FOREIGN KEY (id_usuarios)REFERENCES usuarios(id_usuarios),
@@ -85,7 +85,17 @@ CREATE TABLE servicos(
 );
 
 CREATE TABLE solicitar_serv(
-	
+    id_solicitacao INT AUTO_INCREMENT PRIMARY KEY,
+    data_solicitacao DATETIME NOT NULL DEFAULT NOW(),
+    data_agendada DATETIME NOT NULL,
+    stats ENUM('ACEITA','RECUSADA'),
+    observacoes VARCHAR(100),
+    id_usuarios INT,
+    id_profissional INT,
+    id_servico INT,
+    FOREIGN KEY(id_usuarios)REFERENCES usuarios(id_usuarios),
+    FOREIGN KEY(id_profissional)REFERENCES profissionais(id_profissional),
+    FOREIGN KEY(id_servico)REFERENCES servicos(id_servico)
 );
 
 CREATE TABLE pagamentos(
