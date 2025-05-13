@@ -141,15 +141,15 @@ CREATE TABLE historico_pag(
 
 
 INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES
-('João Silva', 'joao.silva@email.com', '12345678', '(11) 91234-5678', '123.456.789-00'),
+('João Silva', 'joao.silva@email.com', 'joao1267', '(11) 91234-5678', '123.456.789-00'),
 ('Maria Oliveira', 'maria.oliveira@email.com', '87654321', '(21) 98765-4321', '234.567.890-01'),
-('Pedro Souza', 'pedro.souza@email.com', 'password1', '(31) 92345-6789', '345.678.901-02'),
-('Ana Costa', 'ana.costa@email.com', 'senha123', '(41) 93456-7890', '456.789.012-03'),
-('Carlos Lima', 'carlos.lima@email.com', 'qwertyui', '(51) 94567-8901', '567.890.123-04'),
+('Pedro Souza', 'pedro.souza@email.com', 'pas12351', '(31) 92345-6789', '345.678.901-02'),
+('Ana Costa', 'ana.costa@email.com', 'anac5123', '(41) 93456-7890', '456.789.012-03'),
+('Carlos Lima', 'carlos.lima@email.com', 'car126li', '(51) 94567-8901', '567.890.123-04'),
 ('Patrícia Pereira', 'patricia.pereira@email.com', 'abcde123', '(61) 95678-9012', '678.901.234-05'),
-('Roberto Gomes', 'roberto.gomes@email.com', 'senha987', '(71) 96789-0123', '789.012.345-06'),
-('Fernanda Silva', 'fernanda.silva@email.com', '123qwerty', '(81) 97890-1234', '890.123.456-07'),
-('Luciana Martins', 'luciana.martins@email.com', 'luciana2021', '(91) 98901-2345', '901.234.567-08'),
+('Roberto Gomes', 'roberto.gomes@email.com', 'rober987', '(71) 96789-0123', '789.012.345-06'),
+('Fernanda Silva', 'fernanda.silva@email.com', '123ferna', '(81) 97890-1234', '890.123.456-07'),
+('Luciana Martins', 'luciana.martins@email.com', 'luci8na2', '(91) 98901-2345', '901.234.567-08'),
 ('Rafael Alves', 'rafael.alves@email.com', '65432198', '(11) 91234-9876', '012.345.678-09');
 
 
