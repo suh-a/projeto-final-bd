@@ -188,3 +188,15 @@ INSERT INTO profissionais (nome, email, senha, telefone, cpf_cnpj, descricao, no
 ('Juliana Dias', 'juliana@exemplo.com', 'senha123', '11922222222', '852.741.963-00', 'Projetos estruturais de edifícios.', 4.6, NOW(), 8),
 ('Rafael Almeida', 'rafael@exemplo.com', 'senha123', '11911111111', '741.963.852-00', 'Execução de obras civis.', 4.7, NOW(), 9),
 ('Camila Martins', 'camila@exemplo.com', 'senha123', '11900000000', '159.357.486-00', 'Desenvolvimento urbano sustentável.', 4.8, NOW(), 10);
+
+INSERT INTO disponibilidade (dia_semana, horario_inicio, horario_fim, id_profissional) VALUES
+  ('Segunda-feira', '08:00:00', '12:00:00', 1),
+  ('Terça-feira', '13:00:00', '17:00:00', 2),
+  ('Quarta-feira', '09:00:00', '13:00:00', 3),
+  ('Quinta-feira', '14:00:00', '18:00:00', 4),
+  ('Sexta-feira', '10:00:00', '14:00:00', 5),
+  ('Sábado', '08:00:00', '12:00:00', 6),
+  ('Domingo', '13:00:00', '17:00:00', 7),
+  ('Segunda-feira', '09:00:00', '13:00:00', 8),
+  ('Terça-feira', '14:00:00', '18:00:00', 9),
+  ('Quarta-feira', '10:00:00', '14:00:00', 10);
