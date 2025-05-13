@@ -164,3 +164,15 @@ INSERT INTO notificacoes (mensagem, lida, id_usuarios) VALUES
 ('Mensagem 8', 1, 8),
 ('Mensagem 9', 0, 9),
 ('Mensagem 10', 1, 10);
+
+ INSERT INTO areas (nome_area) VALUES 
+('Engenharia Civil'),
+('Arquitetura'),
+('Topografia'),
+('Geotecnia'),
+('Hidráulica'),
+('Saneamento'),
+('Transportes'),
+('Estruturas'),
+('Construção Civil'),
+('Planejamento Urbano');
