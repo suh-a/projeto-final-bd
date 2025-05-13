@@ -102,7 +102,7 @@ CREATE TABLE servicos(
     id_servico INT AUTO_INCREMENT PRIMARY KEY,
     nome_servico VARCHAR(45) NOT NULL,
     descricao TEXT,
-    preco_estimar DOUBLE NOT NULL,
+    preco_base DOUBLE NOT NULL,
     id_categoria INT,
     FOREIGN KEY(id_categoria) REFERENCES categorias_servicos(id_categoria)
 );
