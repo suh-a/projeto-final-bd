@@ -176,3 +176,15 @@ INSERT INTO notificacoes (mensagem, lida, id_usuarios) VALUES
 ('Estruturas'),
 ('Construção Civil'),
 ('Planejamento Urbano');
+
+INSERT INTO profissionais (nome, email, senha, telefone, cpf_cnpj, descricao, nota_media, data_criacao, id_area) VALUES
+('João Silva', 'joao@exemplo.com', 'senha123', '11999999999', '123.456.789-00', 'Especialista em fundações e estruturas.', 4.5, NOW(), 1),
+('Maria Souza', 'maria@exemplo.com', 'senha123', '11988888888', '987.654.321-00', 'Projetos arquitetônicos residenciais.', 4.7, NOW(), 2),
+('Carlos Mendes', 'carlos@exemplo.com', 'senha123', '11977777777', '321.654.987-00', 'Levantamentos topográficos precisos.', 4.6, NOW(), 3),
+('Ana Lima', 'ana@exemplo.com', 'senha123', '11966666666', '654.987.321-00', 'Análise e contenção de solos.', 4.4, NOW(), 4),
+('Pedro Rocha', 'pedro@exemplo.com', 'senha123', '11955555555', '789.123.456-00', 'Projetos de drenagem urbana.', 4.8, NOW(), 5),
+('Fernanda Costa', 'fernanda@exemplo.com', 'senha123', '11944444444', '456.789.123-00', 'Soluções de esgoto e água potável.', 4.9, NOW(), 6),
+('Lucas Oliveira', 'lucas@exemplo.com', 'senha123', '11933333333', '963.852.741-00', 'Logística e planejamento viário.', 4.3, NOW(), 7),
+('Juliana Dias', 'juliana@exemplo.com', 'senha123', '11922222222', '852.741.963-00', 'Projetos estruturais de edifícios.', 4.6, NOW(), 8),
+('Rafael Almeida', 'rafael@exemplo.com', 'senha123', '11911111111', '741.963.852-00', 'Execução de obras civis.', 4.7, NOW(), 9),
+('Camila Martins', 'camila@exemplo.com', 'senha123', '11900000000', '159.357.486-00', 'Desenvolvimento urbano sustentável.', 4.8, NOW(), 10);
