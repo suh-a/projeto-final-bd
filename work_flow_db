@@ -212,3 +212,16 @@ INSERT INTO avaliacoes (nota, comentario, id_usuarios, id_profissional) VALUES
 (3.5, 'Faltou mais comunicação.', 8, 8),
 (4.7, 'Muito bom, recomendo!', 9, 9),
 (5.0, 'Excelente serviço!', 10, 10);
+
+INSERT INTO favoritos (id_usuarios, id_profissional) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
