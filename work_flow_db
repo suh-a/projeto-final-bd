@@ -200,3 +200,15 @@ INSERT INTO disponibilidade (dia_semana, horario_inicio, horario_fim, id_profiss
   ('Segunda-feira', '09:00:00', '13:00:00', 8),
   ('Terça-feira', '14:00:00', '18:00:00', 9),
   ('Quarta-feira', '10:00:00', '14:00:00', 10);
+
+INSERT INTO avaliacoes (nota, comentario, id_usuarios, id_profissional) VALUES
+(5.0, 'Excelente trabalho!', 1, 1),
+(4.5, 'Muito bom, mas poderia melhorar.', 2, 2),
+(3.0, 'Atendimento razoável.', 3, 3),
+(4.8, 'Ótima experiência!', 4, 4),
+(4.2, 'Bom, mas precisa de mais atenção.', 5, 5),
+(5.0, 'Adorei! Super recomendo.', 6, 6),
+(4.0, 'Atendeu bem, mas com atraso.', 7, 7),
+(3.5, 'Faltou mais comunicação.', 8, 8),
+(4.7, 'Muito bom, recomendo!', 9, 9),
+(5.0, 'Excelente serviço!', 10, 10);
