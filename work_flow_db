@@ -236,3 +236,15 @@ INSERT INTO mensagens_chat (mensagem, id_usuarios, id_profissional) VALUES
 ('Pode enviar referências?', 8, 8),
 ('Aceita cartão de crédito?', 9, 9),
 ('Obrigado pelo atendimento!', 10, 10);
+
+INSERT INTO enderecos (rua, numero, complemento, bairro, cidade, estado, cep, id_usuarios, id_profissional) VALUES
+('Rua das Flores', '123', 'Apto 101', 'Centro', 'São Paulo', 'SP', '01001-000', 1, NULL),
+('Av. Paulista', '1000', NULL, 'Bela Vista', 'São Paulo', 'SP', '01310-000', 2, NULL),
+('Rua dos Pinheiros', '456', 'Casa', 'Pinheiros', 'São Paulo', 'SP', '05422-000', 3, NULL),
+('Rua XV de Novembro', '789', NULL, 'Centro', 'Curitiba', 'PR', '80020-310', 4, NULL),
+('Av. Brasil', '135', 'Sala 3', 'Copacabana', 'Rio de Janeiro', 'RJ', '22050-040', 5, NULL),
+('Rua Bahia', '246', NULL, 'Savassi', 'Belo Horizonte', 'MG', '30140-110', 6, NULL),
+('Rua Marechal Deodoro', '357', 'Loja 2', 'Centro', 'Porto Alegre', 'RS', '90020-080', 7, NULL),
+('Av. Ipiranga', '468', NULL, 'Centro', 'Porto Alegre', 'RS', '90020-090', 8, NULL),
+('Rua das Acácias', '579', 'Apto 301', 'Jardins', 'São Paulo', 'SP', '01420-000', 9, NULL),
+('Rua Amazonas', '680', NULL, 'Centro', 'Fortaleza', 'CE', '60010-000', 10, NULL);
