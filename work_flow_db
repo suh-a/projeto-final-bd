@@ -358,6 +358,13 @@ DELIMITER ;
 
 
 -- triggers
+DELIMITER // 
+CREATE TRIGGER AtualizaNotaDepoisAvaliacao 
+AFTER INSERT ON avaliacoes 
+FOR EACH ROW 
+BEGIN 
+CALL AtualizaNotaMedia(NEW.id_profissional); 
+END //
 
 CREATE TRIGGER AtualizaDataCriacaoProfissional
 BEFORE INSERT ON profissionais
