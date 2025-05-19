@@ -284,3 +284,15 @@ INSERT INTO solicitar_serv (data_agendada, stats, observacoes, id_usuarios, id_p
 ('2025-06-17 11:00:00', 'ACEITA', 'Confirmar orçamento.', 8, 8, 5),
 ('2025-06-18 09:00:00', 'RECUSADA', 'Problema com agenda.', 9, 9, 8),
 ('2025-06-19 14:00:00', 'ACEITA', 'Trabalho padrão.', 10, 10, 10);
+
+INSERT INTO pagamentos (valor, metodo_pagamento, status_pagamento, id_solicitacao) VALUES
+(1500, 'Cartão de Crédito', 'PA', 1),
+(2000, 'Boleto', 'NP', 2),
+(900, 'PIX', 'PA', 3),
+(1100, 'Cartão de Crédito', 'PA', 4),
+(1400, 'PIX', 'NP', 5),
+(1200, 'Boleto', 'PA', 6),
+(800, 'PIX', 'PA', 7),
+(600, 'Cartão de Crédito', 'PA', 8),
+(1300, 'Boleto', 'NP', 9),
+(1600, 'PIX', 'PA', 10);
