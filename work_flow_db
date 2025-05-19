@@ -260,3 +260,15 @@ INSERT INTO categorias_servicos (nome_categoria) VALUES
 ('Hidráulica'),
 ('Saneamento'),
 ('Transporte');
+
+INSERT INTO servicos (nome_servico, descricao, preco_base, id_categoria) VALUES
+('Construção de Fundacao', 'Construção de fundações residenciais e comerciais.', 1500, 1),
+('Reforma Residencial', 'Reformas completas de imóveis residenciais.', 1200, 2),
+('Consultoria Técnica', 'Consultoria especializada em engenharia.', 800, 3),
+('Projeto Arquitetônico', 'Desenvolvimento de projetos arquitetônicos.', 2000, 4),
+('Manutenção Predial', 'Serviços de manutenção predial.', 600, 5),
+('Levantamento Topográfico', 'Serviço de levantamento de terreno.', 900, 6),
+('Análise de Solo', 'Análise e estudos geotécnicos do solo.', 1100, 7),
+('Projeto Hidráulico', 'Desenvolvimento de projeto hidráulico.', 1300, 8),
+('Sistema de Esgoto', 'Implantação de sistemas de esgoto.', 1400, 9),
+('Planejamento Urbano', 'Consultoria para planejamento urbano.', 1600, 10);
