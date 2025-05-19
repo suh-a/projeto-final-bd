@@ -336,3 +336,16 @@ BEGIN
   UPDATE profissionais SET nota_media = nova_nota WHERE id_profissional = p_id_profissional;
 END //
 
+-- functions
+
+
+
+-- triggers
+
+
+-- views
+
+
+
+-- consultas (join, group by, having, order by, where)
+
