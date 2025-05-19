@@ -248,3 +248,15 @@ INSERT INTO enderecos (rua, numero, complemento, bairro, cidade, estado, cep, id
 ('Av. Ipiranga', '468', NULL, 'Centro', 'Porto Alegre', 'RS', '90020-090', 8, NULL),
 ('Rua das Acácias', '579', 'Apto 301', 'Jardins', 'São Paulo', 'SP', '01420-000', 9, NULL),
 ('Rua Amazonas', '680', NULL, 'Centro', 'Fortaleza', 'CE', '60010-000', 10, NULL);
+
+INSERT INTO categorias_servicos (nome_categoria) VALUES
+('Construção'),
+('Reformas'),
+('Consultoria'),
+('Projeto'),
+('Manutenção'),
+('Topografia'),
+('Geotecnia'),
+('Hidráulica'),
+('Saneamento'),
+('Transporte');
