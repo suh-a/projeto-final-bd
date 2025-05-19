@@ -418,4 +418,12 @@ SELECT a.nome_area, COUNT(p.id_profissional) AS qtd_profissionais
 FROM areas a 
 LEFT JOIN profissionais p ON a.id_area = p.id_area 
 GROUP BY a.nome_area 
-ORDER BY qtd_profissionais DESC; 
+ORDER BY qtd_profissionais DESC;
+
+-- 3. Listar solicitações aceitas com detalhes (JOIN + WHERE + ORDER BY) 
+SELECT ss.id_solicitacao, u.nome AS usuario, p.nome AS profissional, s.nome_servico, 
+ss.data_agendada 
+FROM solicitar_serv ss 
+JOIN usuarios u ON ss.id_usuarios = u.id_usuarios 
+JOIN profissionais p ON ss.id_profissional = p.id_profissional 
+JOIN servicos s ON ss.id_servico = s.id_servico
