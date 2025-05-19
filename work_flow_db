@@ -375,7 +375,14 @@ END //
 
 -- views
 
-
+CREATE VIEW vw_pagamentos_pendentes AS 
+SELECT ss.id_solicitacao, u.nome AS usuario, p.nome AS profissional, pag.valor, 
+pag.status_pagamento 
+FROM pagamentos pag 
+JOIN solicitar_serv ss ON pag.id_solicitacao = ss.id_solicitacao 
+JOIN usuarios u ON ss.id_usuarios = u.id_usuarios 
+JOIN profissionais p ON ss.id_profissional = p.id_profissional 
+WHERE pag.status_pagamento = 'NP';
 
 -- consultas (join, group by, having, order by, where)
 
