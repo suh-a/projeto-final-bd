@@ -225,3 +225,14 @@ INSERT INTO favoritos (id_usuarios, id_profissional) VALUES
 (9, 9),
 (10, 10);
 
+INSERT INTO mensagens_chat (mensagem, id_usuarios, id_profissional) VALUES
+('Olá, gostaria de saber mais sobre seu serviço.', 1, 1),
+('Quando você pode iniciar o projeto?', 2, 2),
+('Qual o custo aproximado?', 3, 3),
+('Preciso de uma reunião.', 4, 4),
+('Tem disponibilidade na próxima semana?', 5, 5),
+('Gostaria de um orçamento detalhado.', 6, 6),
+('Você trabalha com projetos residenciais?', 7, 7),
+('Pode enviar referências?', 8, 8),
+('Aceita cartão de crédito?', 9, 9),
+('Obrigado pelo atendimento!', 10, 10);
