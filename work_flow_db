@@ -1,6 +1,8 @@
-    CREATE DATABASE work_flow_db;
+CREATE DATABASE work_flow_db;
 
 USE work_flow_db;
+
+-- tabelas
 
 CREATE TABLE usuarios(
     id_usuarios INT AUTO_INCREMENT PRIMARY KEY,
@@ -138,6 +140,8 @@ CREATE TABLE historico_pag(
     FOREIGN KEY(id_profissional)REFERENCES profissionais(id_profissional),
     FOREIGN KEY(id_pagamento)REFERENCES pagamentos(id_pagamento)
 );
+
+-- inserts
 
 
 INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES
@@ -309,15 +313,22 @@ INSERT INTO historico_pag (id_profissional, id_pagamento) VALUES
 (9, 9),
 (10, 10);
 
+-- updates
+
 UPDATE usuarios SET telefone = '(11) 99999-9999' WHERE id_usuarios = 1;
 UPDATE profissionais SET nota_media = 4.9 WHERE id_profissional = 7;
 UPDATE solicitar_serv SET stats = 'ACEITA' WHERE id_solicitacao = 2;
+
+-- deletes
 
 DELETE FROM notificacoes WHERE id_notificacao = 10;
 DELETE FROM mensagens_chat WHERE id_mensagem = 9;
 DELETE FROM favoritos WHERE id_favorito = 1;
 
+-- procedures
+
 DELIMITER //
+
 CREATE PROCEDURE AtualizaNotaMedia(IN p_id_profissional INT)
 BEGIN
   DECLARE nova_nota DOUBLE;
