@@ -336,6 +336,11 @@ BEGIN
   UPDATE profissionais SET nota_media = nova_nota WHERE id_profissional = p_id_profissional;
 END //
 
+CREATE PROCEDURE MarcarNotificacaoLida(IN p_id_notificacao INT)
+BEGIN
+UPDATE notificacoes SET lida = 1 WHERE id_notificacao = p_id_notificacao;
+END //
+
 CREATE PROCEDURE InserirFavorito(IN p_id_usuario INT, IN p_id_profissional INT)
 BEGIN
 IF NOT EXISTS (
