@@ -359,6 +359,12 @@ DELIMITER ;
 
 -- triggers
 
+CREATE TRIGGER AtualizaDataCriacaoProfissional
+BEFORE INSERT ON profissionais
+FOR EACH ROW
+BEGIN
+SET NEW.data_criacao = NOW();
+END //
 
 -- views
 
