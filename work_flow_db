@@ -392,3 +392,9 @@ GROUP BY p.nome;
 
 -- consultas (join, group by, having, order by, where)
 
+-- 2. Contar quantos profissionais cada área possui (GROUP BY) 
+SELECT a.nome_area, COUNT(p.id_profissional) AS qtd_profissionais 
+FROM areas a 
+LEFT JOIN profissionais p ON a.id_area = p.id_area 
+GROUP BY a.nome_area 
+ORDER BY qtd_profissionais DESC; 
