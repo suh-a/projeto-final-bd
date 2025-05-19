@@ -296,3 +296,15 @@ INSERT INTO pagamentos (valor, metodo_pagamento, status_pagamento, id_solicitaca
 (600, 'Cartão de Crédito', 'PA', 8),
 (1300, 'Boleto', 'NP', 9),
 (1600, 'PIX', 'PA', 10);
+
+INSERT INTO historico_pag (id_profissional, id_pagamento) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
