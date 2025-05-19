@@ -366,6 +366,13 @@ BEGIN
 CALL AtualizaNotaMedia(NEW.id_profissional); 
 END //
 
+CREATE TRIGGER DeletaFavoritosProfissional 
+BEFORE DELETE ON profissionais 
+FOR EACH ROW 
+BEGIN 
+DELETE FROM favoritos WHERE id_profissional = OLD.id_profissional; 
+END // 
+
 CREATE TRIGGER AtualizaDataCriacaoProfissional
 BEFORE INSERT ON profissionais
 FOR EACH ROW
