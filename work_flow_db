@@ -384,5 +384,11 @@ JOIN usuarios u ON ss.id_usuarios = u.id_usuarios
 JOIN profissionais p ON ss.id_profissional = p.id_profissional 
 WHERE pag.status_pagamento = 'NP';
 
+CREATE VIEW vw_avaliacoes_profissionais AS 
+SELECT p.nome, AVG(a.nota) AS media_nota, COUNT(a.id_avaliacao) AS total_avaliacoes 
+FROM avaliacoes a 
+JOIN profissionais p ON a.id_profissional = p.id_profissional 
+GROUP BY p.nome; 
+
 -- consultas (join, group by, having, order by, where)
 
