@@ -381,6 +381,15 @@ SET NEW.data_criacao = NOW();
 END //
 
 -- views
+CREATE VIEW vw_profissionais_com_area AS 
+SELECT p.id_profissional, p.nome, a.nome_area, p.nota_media 
+FROM profissionais p 
+JOIN areas a ON p.id_area = a.id_area; 
+
+CREATE VIEW vw_servicos_categoria AS 
+SELECT s.id_servico, s.nome_servico, c.nome_categoria, s.preco_base 
+FROM servicos s 
+JOIN categorias_servicos c ON s.id_categoria = c.id_categoria; 
 
 CREATE VIEW vw_pagamentos_pendentes AS 
 SELECT ss.id_solicitacao, u.nome AS usuario, p.nome AS profissional, pag.valor, 
