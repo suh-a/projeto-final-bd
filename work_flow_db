@@ -308,3 +308,11 @@ INSERT INTO historico_pag (id_profissional, id_pagamento) VALUES
 (8, 8),
 (9, 9),
 (10, 10);
+
+UPDATE usuarios SET telefone = '(11) 99999-9999' WHERE id_usuarios = 1;
+UPDATE profissionais SET nota_media = 4.9 WHERE id_profissional = 7;
+UPDATE solicitar_serv SET stats = 'ACEITA' WHERE id_solicitacao = 2;
+
+DELETE FROM notificacoes WHERE id_notificacao = 10;
+DELETE FROM mensagens_chat WHERE id_mensagem = 9;
+DELETE FROM favoritos WHERE id_favorito = 1;
