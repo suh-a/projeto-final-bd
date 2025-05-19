@@ -390,6 +390,11 @@ FROM avaliacoes a
 JOIN profissionais p ON a.id_profissional = p.id_profissional 
 GROUP BY p.nome; 
 
+CREATE VIEW vw_disponibilidade_profissional AS
+SELECT p.nome, d.dia_semana, d.horario_inicio, d.horario_fim
+FROM disponibilidade d
+JOIN profissionais p ON d.id_profissional = p.id_profissional;
+
 -- consultas (join, group by, having, order by, where)
 
 -- 2. Contar quantos profissionais cada área possui (GROUP BY) 
