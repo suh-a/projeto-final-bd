@@ -316,3 +316,12 @@ UPDATE solicitar_serv SET stats = 'ACEITA' WHERE id_solicitacao = 2;
 DELETE FROM notificacoes WHERE id_notificacao = 10;
 DELETE FROM mensagens_chat WHERE id_mensagem = 9;
 DELETE FROM favoritos WHERE id_favorito = 1;
+
+DELIMITER //
+CREATE PROCEDURE AtualizaNotaMedia(IN p_id_profissional INT)
+BEGIN
+  DECLARE nova_nota DOUBLE;
+  SELECT AVG(nota) INTO nova_nota FROM avaliacoes WHERE id_profissional = p_id_profissional;
+  UPDATE profissionais SET nota_media = nova_nota WHERE id_profissional = p_id_profissional;
+END //
+
