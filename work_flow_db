@@ -465,6 +465,12 @@ FROM avaliacoes a
 JOIN profissionais p ON a.id_profissional = p.id_profissional 
 GROUP BY p.nome; 
 
+CREATE VIEW vw_profissionais_com_favoritos AS
+SELECT p.nome, COUNT(f.id_favorito) AS total_favoritos
+FROM profissionais p
+LEFT JOIN favoritos f ON p.id_profissional = f.id_profissional
+GROUP BY p.nome;
+
 CREATE VIEW vw_disponibilidade_profissional AS
 SELECT p.nome, d.dia_semana, d.horario_inicio, d.horario_fim
 FROM disponibilidade d
