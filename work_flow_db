@@ -476,6 +476,13 @@ SELECT p.nome, d.dia_semana, d.horario_inicio, d.horario_fim
 FROM disponibilidade d
 JOIN profissionais p ON d.id_profissional = p.id_profissional;
 
+CREATE VIEW vw_mensagens_usuarios AS
+SELECT u.nome AS usuario, p.nome AS profissional, m.mensagem, m.data_envio
+FROM mensagens_chat m
+JOIN usuarios u ON m.id_usuarios = u.id_usuarios
+JOIN profissionais p ON m.id_profissional = p.id_profissional;
+
+
 -- consultas (join, group by, having, order by, where)
 
 -- 1. Buscar profissionais com nota média maior que 4.5 (HAVING) ordenados por nota desc
