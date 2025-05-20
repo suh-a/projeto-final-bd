@@ -482,6 +482,12 @@ FROM mensagens_chat m
 JOIN usuarios u ON m.id_usuarios = u.id_usuarios
 JOIN profissionais p ON m.id_profissional = p.id_profissional;
 
+CREATE VIEW vw_areas_com_profissionais AS
+SELECT a.nome_area, COUNT(p.id_profissional) AS total_profissionais
+FROM areas a
+LEFT JOIN profissionais p ON a.id_area = p.id_area
+GROUP BY a.nome_area;
+
 
 -- consultas (join, group by, having, order by, where)
 
