@@ -356,6 +356,14 @@ DELIMITER ;
 
 -- functions
 
+DELIMITER //
+
+CREATE FUNCTION ContarAvaliacoes(p_id_profissional INT) RETURNS INT
+BEGIN
+  DECLARE total INT;
+  SELECT COUNT(*) INTO total FROM avaliacoes WHERE id_profissional = p_id_profissional;
+  RETURN total;
+END //
 
 
 -- triggers
