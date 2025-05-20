@@ -398,6 +398,21 @@ END //
 
 
 -- views
+
+CREATE VIEW vw_usuarios_notificacoes AS
+SELECT u.nome, n.mensagem, n.lida, n.data_envio
+FROM usuarios u
+JOIN notificacoes n ON u.id_usuarios = n.id_usuarios;
+
+
+CREATE VIEW vw_solicitacoes_completas AS
+SELECT ss.id_solicitacao, u.nome AS usuario, p.nome AS profissional, s.nome_servico, ss.data_solicitacao, ss.data_agendada, ss.stats
+FROM solicitar_serv ss
+JOIN usuarios u ON ss.id_usuarios = u.id_usuarios
+JOIN profissionais p ON ss.id_profissional = p.id_profissional
+JOIN servicos s ON ss.id_servico = s.id_servico;
+
+
 CREATE VIEW vw_profissionais_com_area AS 
 SELECT p.id_profissional, p.nome, a.nome_area, p.nota_media 
 FROM profissionais p 
