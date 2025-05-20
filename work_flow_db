@@ -373,6 +373,14 @@ BEGIN
   RETURN media;
 END //
 
+CREATE FUNCTION ProfissionalMaisAvaliado() RETURNS INT
+BEGIN
+  DECLARE prof_id INT;
+  SELECT id_profissional FROM profissionais ORDER BY nota_media DESC LIMIT 1 INTO prof_id;
+  RETURN prof_id;
+END //
+
+DELIMITER ;
 
 
 -- triggers
