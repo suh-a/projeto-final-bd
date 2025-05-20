@@ -366,6 +366,15 @@ BEGIN
 END //
 
 
+CREATE FUNCTION NotaMediaProfissional(p_id_profissional INT) RETURNS DOUBLE
+BEGIN
+  DECLARE media DOUBLE;
+  SELECT AVG(nota) INTO media FROM avaliacoes WHERE id_profissional = p_id_profissional;
+  RETURN media;
+END //
+
+
+
 -- triggers
 DELIMITER // 
 CREATE TRIGGER AtualizaNotaDepoisAvaliacao 
