@@ -445,6 +445,13 @@ JOIN profissionais p ON d.id_profissional = p.id_profissional;
 
 -- consultas (join, group by, having, order by, where)
 
+-- 1. Buscar profissionais com nota média maior que 4.5 (HAVING) ordenados por nota desc
+SELECT p.nome, p.nota_media
+FROM profissionais p
+GROUP BY p.nome, p.nota_media
+HAVING p.nota_media > 4.5
+ORDER BY p.nota_media DESC;
+
 -- 2. Contar quantos profissionais cada área possui (GROUP BY) 
 SELECT a.nome_area, COUNT(p.id_profissional) AS qtd_profissionais 
 FROM areas a 
