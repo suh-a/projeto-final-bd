@@ -389,6 +389,14 @@ BEGIN
 SET NEW.data_criacao = NOW();
 END //
 
+CREATE TRIGGER DeletaFavoritosUsuario
+BEFORE DELETE ON usuarios
+FOR EACH ROW
+BEGIN
+  DELETE FROM favoritos WHERE id_usuarios = OLD.id_usuarios;
+END //
+
+
 -- views
 CREATE VIEW vw_profissionais_com_area AS 
 SELECT p.id_profissional, p.nome, a.nome_area, p.nota_media 
