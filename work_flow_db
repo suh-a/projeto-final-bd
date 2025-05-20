@@ -351,6 +351,7 @@ INSERT INTO favoritos(id_usuarios, id_profissional) VALUES (p_id_usuario,
 p_id_profissional);
 END IF;
 END //
+
 DELIMITER ;
 
 -- functions
