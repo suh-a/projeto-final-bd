@@ -413,6 +413,16 @@ BEGIN
   DELETE FROM favoritos WHERE id_usuarios = OLD.id_usuarios;
 END //
 
+CREATE TRIGGER NotificacaoLidaUpdate
+BEFORE UPDATE ON notificacoes
+FOR EACH ROW
+BEGIN
+  IF NEW.lida = 1 THEN
+    SET NEW.data_envio = NOW();
+  END IF;
+END //
+
+DELIMITER ;
 
 -- views
 
